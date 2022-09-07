@@ -1,0 +1,97 @@
+:set number relativenumber
+:set nu rnu
+:set autoindent
+:set expandtab
+:set tabstop=4
+:set shiftwidth=4
+:set smarttab
+:set softtabstop=4
+:set mouse=a
+:set nowrap
+:set termguicolors
+:set ignorecase
+
+" folding, thanks to this post:
+" https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
+:set foldenable
+:set foldmethod=expr
+:set foldexpr=nvim_treesitter#foldexpr()
+:set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
+:set fillchars=fold:\ 
+:set foldminlines=1
+:set foldlevel=10
+
+call plug#begin()
+
+Plug 'nvim-lualine/lualine.nvim'                            " Status bar
+Plug 'https://github.com/ap/vim-css-color'                  " CSS Color Preview
+Plug 'https://github.com/neoclide/coc.nvim'                 " Auto Completion
+Plug 'https://github.com/ryanoasis/vim-devicons'            " Developer Icons
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}                " Color Theme
+Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
+Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
+Plug 'dense-analysis/ale'                                   " Lint Engine
+Plug 'preservim/nerdcommenter'                              " Commenter
+Plug 'lukas-reineke/indent-blankline.nvim'                  " Indent Guide
+Plug 'lewis6991/gitsigns.nvim'                              " Git tooling
+Plug 'TimUntersberger/neogit'                               " Git tooling
+Plug 'andweeb/presence.nvim'                                " Discord Presence
+Plug 'https://github.com/yamatsum/nvim-cursorline'          " Cursor Line
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter
+Plug 'nvim-treesitter/nvim-treesitter-context'              " Sticky Context
+Plug 'ThePrimeagen/harpoon'                                 " Bookmarks
+Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
+Plug 'windwp/nvim-autopairs'                                " Auto closing for brackets and html tags
+Plug 'folke/which-key.nvim'                                 " Key binding help
+Plug 'https://github.com/anuvyklack/hydra.nvim'
+Plug 'phaazon/hop.nvim'                                     " Faster key navigation
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
+Plug 'neovim/nvim-lspconfig'
+
+call plug#end()
+
+" Setup plugins
+:lua require('cursorline')
+:lua require('indent_blankline_setup')
+:lua require('telescope_setup')
+:lua require('hydra_setup')
+:lua require('lualine_setup')
+:lua require('gitsigns').setup()
+:lua require('bufferline').setup()
+:lua require('nvim-autopairs').setup()
+:lua require('which-key').setup()
+:lua require('neogit').setup()
+:lua require('hop').setup()
+:lua require('lspconfig').tsserver.setup{}
+
+filetype plugin on
+
+" Setup colorscheme
+:colorscheme catppuccin
+:highlight Normal guibg=none
+:highlight NonText guibg=none
+:highlight Folded guibg=none guifg=gray
+:highlight Comment guifg=gray
+
+" Map keys
+let mapleader = ' '
+nnoremap <leader>fs <cmd>Telescope find_files hidden=true<CR>
+nnoremap <leader>fc <cmd>Telescope commands<CR>
+nnoremap <leader>ff <cmd>Telescope git_files<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fm <cmd>Telescope harpoon marks<CR>
+nnoremap <leader>ft <cmd>Telescope treesitter<CR>
+nnoremap <leader>mm <cmd>lua require('harpoon.mark').add_file()<CR>
+nnoremap <leader>mk <cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>
+nnoremap <leader>mn <cmd>lua require('harpoon.ui').nav_next()<CR>
+nnoremap <leader>mp <cmd>lua require('harpoon.ui').nav_prev()<CR>
+nnoremap <silent> <leader>hh :HopAnywhere<CR>
+nnoremap <silent> <leader>hw :HopWord<CR>
+nnoremap <silent> <leader>hl :HopLineStart<CR>
+nnoremap <silent> <leader>hp :HopPattern<CR>
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+
