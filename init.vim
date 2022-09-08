@@ -48,6 +48,7 @@ Plug 'https://github.com/anuvyklack/hydra.nvim'
 Plug 'phaazon/hop.nvim'                                     " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
 Plug 'neovim/nvim-lspconfig'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
 
@@ -68,11 +69,8 @@ call plug#end()
 filetype plugin on
 
 " Setup colorscheme
-:colorscheme catppuccin
-:highlight Normal guibg=none
-:highlight NonText guibg=none
-:highlight Folded guibg=none guifg=gray
-:highlight Comment guifg=gray
+:colorscheme tokyonight-night
+:highlight Folded guibg=none
 
 " Map keys
 let mapleader = ' '
