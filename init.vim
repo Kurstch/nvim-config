@@ -48,6 +48,7 @@ Plug 'https://github.com/anuvyklack/hydra.nvim'
 Plug 'phaazon/hop.nvim'                                     " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
 Plug 'neovim/nvim-lspconfig'
+Plug 'Pocco81/true-zen.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
@@ -65,6 +66,7 @@ call plug#end()
 :lua require('neogit').setup()
 :lua require('hop').setup()
 :lua require('lspconfig').tsserver.setup{}
+:lua require('true-zen').setup{}
 
 filetype plugin on
 
@@ -88,6 +90,10 @@ nnoremap <silent> <leader>hh :HopAnywhere<CR>
 nnoremap <silent> <leader>hw :HopWord<CR>
 nnoremap <silent> <leader>hl :HopLineStart<CR>
 nnoremap <silent> <leader>hp :HopPattern<CR>
+nnoremap <silent> <leader>za :TZAtaraxis<CR>
+nnoremap <silent> <leader>zm :TZMinimalist<CR>
+nnoremap <silent> <leader>zn :TZNarrow<CR>
+nnoremap <silent> <leader>zf :TZFocus<CR>
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 
 let g:NERDTreeDirArrowExpandable="+"
