@@ -66,7 +66,7 @@ call plug#end()
 :lua require('neogit').setup()
 :lua require('hop').setup()
 :lua require('lspconfig').tsserver.setup{}
-:lua require('true-zen').setup{}
+:lua require('true-zen').setup{ integrations = { lualine = true }}
 
 filetype plugin on
 
