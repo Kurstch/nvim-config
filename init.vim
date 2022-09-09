@@ -1,5 +1,5 @@
-:set number relativenumber
-:set nu rnu
+":set number relativenumber
+":set nu rnu
 :set autoindent
 :set expandtab
 :set tabstop=4
