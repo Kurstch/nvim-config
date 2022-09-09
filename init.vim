@@ -25,7 +25,6 @@ call plug#begin()
 
 Plug 'nvim-lualine/lualine.nvim'                            " Status bar
 Plug 'https://github.com/ap/vim-css-color'                  " CSS Color Preview
-Plug 'https://github.com/neoclide/coc.nvim'                 " Auto Completion
 Plug 'https://github.com/ryanoasis/vim-devicons'            " Developer Icons
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}                " Color Theme
 Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
@@ -47,7 +46,19 @@ Plug 'folke/which-key.nvim'                                 " Key binding help
 Plug 'https://github.com/anuvyklack/hydra.nvim'
 Plug 'phaazon/hop.nvim'                                     " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
+
+" Language server configuration and utilities
 Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+" Completion framework
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+
 Plug 'Pocco81/true-zen.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
@@ -57,12 +68,16 @@ call plug#end()
 " because otherwise some features would use the wrong key
 let mapleader = ' '
 
+" Options for nvim-cmp
+set completeopt=menu,menuone,noinsert,noselect
+
 " Setup plugins
 :lua require('cursorline')
 :lua require('indent_blankline_setup')
 :lua require('telescope_setup')
 :lua require('hydra_setup')
 :lua require('lualine_setup')
+:lua require('cmp_setup')
 :lua require('gitsigns').setup()
 :lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
@@ -71,6 +86,8 @@ let mapleader = ' '
 :lua require('hop').setup()
 :lua require('lspconfig').tsserver.setup{}
 :lua require('true-zen').setup{ integrations = { lualine = true }}
+:lua require('mason').setup()
+:lua require("mason-lspconfig").setup()
 
 filetype plugin on
 
@@ -79,7 +96,6 @@ filetype plugin on
 :highlight Folded guibg=none
 
 " Map keys
-let mapleader = ' '
 nnoremap <leader>fs <cmd>Telescope find_files hidden=true<CR>
 nnoremap <leader>fc <cmd>Telescope commands<CR>
 nnoremap <leader>ff <cmd>Telescope git_files<CR>
@@ -98,7 +114,6 @@ nnoremap <silent> <leader>za :TZAtaraxis<CR>
 nnoremap <silent> <leader>zm :TZMinimalist<CR>
 nnoremap <silent> <leader>zn :TZNarrow<CR>
 nnoremap <silent> <leader>zf :TZFocus<CR>
-inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
