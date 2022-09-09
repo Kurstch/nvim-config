@@ -53,6 +53,10 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
 
+" Set <leader> key before running `setup` on packages
+" because otherwise some features would use the wrong key
+let mapleader = ' '
+
 " Setup plugins
 :lua require('cursorline')
 :lua require('indent_blankline_setup')
