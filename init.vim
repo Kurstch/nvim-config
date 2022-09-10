@@ -10,6 +10,7 @@
 :set nowrap
 :set termguicolors
 :set ignorecase
+:set scrolloff=10
 
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
