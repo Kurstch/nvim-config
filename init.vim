@@ -27,7 +27,6 @@ call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'                            " Status bar
 Plug 'https://github.com/ap/vim-css-color'                  " CSS Color Preview
 Plug 'https://github.com/ryanoasis/vim-devicons'            " Developer Icons
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}                " Color Theme
 Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
 Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
 Plug 'dense-analysis/ale'                                   " Lint Engine
