@@ -114,6 +114,12 @@ nnoremap <silent> <leader>za :TZAtaraxis<CR>
 nnoremap <silent> <leader>zm :TZMinimalist<CR>
 nnoremap <silent> <leader>zn :TZNarrow<CR>
 nnoremap <silent> <leader>zf :TZFocus<CR>
+nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>lh <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <leader>lc <cmd>lua vim.lsp.buf.code_action()<CR>
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
