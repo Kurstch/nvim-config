@@ -60,6 +60,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 
+Plug 'https://github.com/LumaKernel/nvim-visual-eof.lua'
 Plug 'Pocco81/true-zen.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
@@ -90,6 +91,7 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('nvim-tree').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
+:lua require('visual-eof').setup()
 
 filetype plugin on
 
