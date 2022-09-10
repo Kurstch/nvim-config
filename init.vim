@@ -125,6 +125,3 @@ nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>lc <cmd>lua vim.lsp.buf.code_action()<CR>
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
