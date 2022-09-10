@@ -32,7 +32,6 @@ Plug 'lukas-reineke/indent-blankline.nvim'                  " Indent Guide
 Plug 'lewis6991/gitsigns.nvim'                              " Git tooling
 Plug 'Pocco81/true-zen.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'https://github.com/LumaKernel/nvim-visual-eof.lua'
 Plug 'folke/which-key.nvim'                                 " Key binding help
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
@@ -95,7 +94,6 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('nvim-tree').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
-:lua require('visual-eof').setup()
 
 filetype plugin on
 
