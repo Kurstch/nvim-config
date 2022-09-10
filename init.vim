@@ -46,6 +46,7 @@ Plug 'folke/which-key.nvim'                                 " Key binding help
 Plug 'https://github.com/anuvyklack/hydra.nvim'
 Plug 'phaazon/hop.nvim'                                     " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Language server configuration and utilities
 Plug 'neovim/nvim-lspconfig'
@@ -86,6 +87,7 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('hop').setup()
 :lua require('lspconfig').tsserver.setup{}
 :lua require('true-zen').setup{ integrations = { lualine = true }}
+:lua require('nvim-tree').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
 
@@ -114,6 +116,8 @@ nnoremap <silent> <leader>za :TZAtaraxis<CR>
 nnoremap <silent> <leader>zm :TZMinimalist<CR>
 nnoremap <silent> <leader>zn :TZNarrow<CR>
 nnoremap <silent> <leader>zf :TZFocus<CR>
+nnoremap <silent> <leader>tt :NvimTreeToggle<CR>
+nnoremap <silent> <leader>tf :NvimTreeFocus<CR>
 nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lh <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
