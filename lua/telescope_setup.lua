@@ -13,4 +13,3 @@ t.setup {
 }
 
 t.load_extension('harpoon')
-

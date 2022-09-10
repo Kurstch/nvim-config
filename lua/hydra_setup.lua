@@ -188,4 +188,3 @@ Hydra({
       { 'q', nil, { exit = true, nowait = true, desc = 'exit' } },
    }
 })
-
