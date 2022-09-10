@@ -24,29 +24,34 @@
 
 call plug#begin()
 
+" UI / Workflow
 Plug 'nvim-lualine/lualine.nvim'                            " Status bar
 Plug 'https://github.com/ap/vim-css-color'                  " CSS Color Preview
 Plug 'https://github.com/ryanoasis/vim-devicons'            " Developer Icons
-Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
-Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
-Plug 'dense-analysis/ale'                                   " Lint Engine
-Plug 'preservim/nerdcommenter'                              " Commenter
 Plug 'lukas-reineke/indent-blankline.nvim'                  " Indent Guide
 Plug 'lewis6991/gitsigns.nvim'                              " Git tooling
+Plug 'Pocco81/true-zen.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'https://github.com/LumaKernel/nvim-visual-eof.lua'
+Plug 'folke/which-key.nvim'                                 " Key binding help
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
+Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                               " Git tooling
-Plug 'andweeb/presence.nvim'                                " Discord Presence
 Plug 'https://github.com/yamatsum/nvim-cursorline'          " Cursor Line
+
+" Helpers
+Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
+Plug 'dense-analysis/ale'                                   " Lint Engine
+Plug 'preservim/nerdcommenter'                              " Commenter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter-context'              " Sticky Context
 Plug 'ThePrimeagen/harpoon'                                 " Bookmarks
-Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
 Plug 'windwp/nvim-autopairs'                                " Auto closing for brackets and html tags
-Plug 'folke/which-key.nvim'                                 " Key binding help
 Plug 'https://github.com/anuvyklack/hydra.nvim'
 Plug 'phaazon/hop.nvim'                                     " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
-Plug 'kyazdani42/nvim-tree.lua'
 
 " Language server configuration and utilities
 Plug 'neovim/nvim-lspconfig'
@@ -60,9 +65,8 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 
-Plug 'https://github.com/LumaKernel/nvim-visual-eof.lua'
-Plug 'Pocco81/true-zen.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Other
+Plug 'andweeb/presence.nvim'                                " Discord Presence
 
 call plug#end()
 
@@ -100,26 +104,32 @@ filetype plugin on
 :highlight Folded guibg=none
 
 " Map keys
+" Telescope
 nnoremap <leader>fs <cmd>Telescope find_files hidden=true<CR>
 nnoremap <leader>fc <cmd>Telescope commands<CR>
 nnoremap <leader>ff <cmd>Telescope git_files<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fm <cmd>Telescope harpoon marks<CR>
 nnoremap <leader>ft <cmd>Telescope treesitter<CR>
+" Harpoon
 nnoremap <leader>mm <cmd>lua require('harpoon.mark').add_file()<CR>
 nnoremap <leader>mk <cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>
 nnoremap <leader>mn <cmd>lua require('harpoon.ui').nav_next()<CR>
 nnoremap <leader>mp <cmd>lua require('harpoon.ui').nav_prev()<CR>
+" Hop
 nnoremap <silent> <leader>hh :HopAnywhere<CR>
 nnoremap <silent> <leader>hw :HopWord<CR>
 nnoremap <silent> <leader>hl :HopLineStart<CR>
 nnoremap <silent> <leader>hp :HopPattern<CR>
+" True Zen
 nnoremap <silent> <leader>za :TZAtaraxis<CR>
 nnoremap <silent> <leader>zm :TZMinimalist<CR>
 nnoremap <silent> <leader>zn :TZNarrow<CR>
 nnoremap <silent> <leader>zf :TZFocus<CR>
+" Nvim Tree
 nnoremap <silent> <leader>tt :NvimTreeToggle<CR>
 nnoremap <silent> <leader>tf :NvimTreeFocus<CR>
+" LSP
 nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lh <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
