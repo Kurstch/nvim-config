@@ -56,6 +56,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdo
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 
 " Completion framework
 Plug 'hrsh7th/nvim-cmp'
@@ -94,6 +95,7 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('nvim-tree').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
+:lua require('lspsaga').init_lsp_saga()
 
 filetype plugin on
 
@@ -128,9 +130,9 @@ nnoremap <silent> <leader>zf :TZFocus<CR>
 nnoremap <silent> <leader>tt :NvimTreeToggle<CR>
 nnoremap <silent> <leader>tf :NvimTreeFocus<CR>
 " LSP
-nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> <leader>lh <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>ld :Lspsaga peek_definition<CR>
+nnoremap <silent> <leader>lh :Lspsaga hover_doc<CR>
 nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <leader>lc <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <leader>lc :Lspsaga code_action<CR>
