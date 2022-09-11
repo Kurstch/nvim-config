@@ -57,6 +57,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+Plug 'hrsh7th/vim-vsnip'
 
 " Completion framework
 Plug 'hrsh7th/nvim-cmp'
