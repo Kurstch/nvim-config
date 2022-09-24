@@ -58,6 +58,7 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 Plug 'hrsh7th/vim-vsnip'
+Plug 'simrat39/rust-tools.nvim'
 
 " Completion framework
 Plug 'hrsh7th/nvim-cmp'
@@ -85,13 +86,13 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('hydra_setup')
 :lua require('lualine_setup')
 :lua require('cmp_setup')
+:lua require('lsp_setup')
 :lua require('gitsigns').setup()
 :lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
 :lua require('which-key').setup()
 :lua require('neogit').setup()
 :lua require('hop').setup()
-:lua require('lspconfig').tsserver.setup{}
 :lua require('true-zen').setup{ integrations = { lualine = true }}
 :lua require('nvim-tree').setup()
 :lua require('mason').setup()
