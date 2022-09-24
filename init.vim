@@ -137,3 +137,4 @@ nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>lc :Lspsaga code_action<CR>
+nnoremap <silent> <F2> :Lspsaga rename<CR>
