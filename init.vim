@@ -98,7 +98,6 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('neogit').setup()
 :lua require('hop').setup()
 :lua require('true-zen').setup{ integrations = { lualine = true }}
-:lua require('nvim-tree').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
 :lua require('lspsaga').init_lsp_saga()
