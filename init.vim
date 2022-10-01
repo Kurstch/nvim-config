@@ -33,12 +33,15 @@ Plug 'lewis6991/gitsigns.nvim'                              " Git tooling
 Plug 'Pocco81/true-zen.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'folke/which-key.nvim'                                 " Key binding help
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
 Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                               " Git tooling
 Plug 'https://github.com/yamatsum/nvim-cursorline'          " Cursor Line
+
+" Telescope
+Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 " Helpers
 Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
@@ -113,6 +116,8 @@ nnoremap <leader>ff <cmd>Telescope git_files<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fm <cmd>Telescope harpoon marks<CR>
 nnoremap <leader>ft <cmd>Telescope treesitter<CR>
+nnoremap <leader>fr <cmd>lua require('telescope').extensions.file_browser.file_browser({ sorting_strategy = "ascending", prompt_position = "top", hidden = true })<CR>
+nnoremap <C-/> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_ivy())<CR>
 " Harpoon
 nnoremap <leader>mm <cmd>lua require('harpoon.mark').add_file()<CR>
 nnoremap <leader>mk <cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>

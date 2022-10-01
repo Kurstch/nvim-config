@@ -1,4 +1,5 @@
 local t = require('telescope')
+local builtin = require('telescope.builtin')
 
 t.setup {
     defaults = {
@@ -9,7 +10,14 @@ t.setup {
             '.git',
             'coverage',
         }
+    },
+    extensions = {
+        file_browser = {
+            hijack_netrw = true,
+        }
     }
 }
 
 t.load_extension('harpoon')
+t.load_extension('file_browser')
+t.load_extension('fzf')
