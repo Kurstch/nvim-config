@@ -72,6 +72,7 @@ Plug 'hrsh7th/cmp-buffer'
 
 " Other
 Plug 'andweeb/presence.nvim'                                " Discord Presence
+Plug 'famiu/nvim-reload'
 
 call plug#end()
 
