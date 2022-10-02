@@ -133,9 +133,6 @@ nnoremap <silent> <leader>za :TZAtaraxis<CR>
 nnoremap <silent> <leader>zm :TZMinimalist<CR>
 nnoremap <silent> <leader>zn :TZNarrow<CR>
 nnoremap <silent> <leader>zf :TZFocus<CR>
-" Nvim Tree
-nnoremap <silent> <leader>tt :NvimTreeToggle<CR>
-nnoremap <silent> <leader>tf :NvimTreeFocus<CR>
 " LSP
 nnoremap <silent> <leader>ld :Lspsaga peek_definition<CR>
 nnoremap <silent> <leader>lh :Lspsaga hover_doc<CR>
