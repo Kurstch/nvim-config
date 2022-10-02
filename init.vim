@@ -39,6 +39,7 @@ Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
 Plug 'haringsrob/nvim_context_vt'                   " Shows context for functions, classes, etc.
+Plug 'glepnir/dashboard-nvim'                       " Dashboard
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
@@ -93,6 +94,7 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('config.lualine')
 :lua require('config.cmp')
 :lua require('config.lsp')
+:lua require('config.dashboard')
 :lua require('gitsigns').setup()
 :lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
