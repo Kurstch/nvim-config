@@ -37,6 +37,7 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
 Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                               " Git tooling
 Plug 'https://github.com/yamatsum/nvim-cursorline'          " Cursor Line
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}               " Terminal manager
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
@@ -141,3 +142,7 @@ nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>lc :Lspsaga code_action<CR>
 nnoremap <silent> <F2> :Lspsaga rename<CR>
+" ToggleTerm
+nnoremap <leader>ta :ToggleTermToggleAll<CR>
+nnoremap <leader>tt <cmd>exe v:count1 . "ToggleTerm"<CR>
+tnoremap <esc> <C-\><C-n><CR>
