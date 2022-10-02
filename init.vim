@@ -84,13 +84,13 @@ let mapleader = ' '
 set completeopt=menu,menuone,noinsert,noselect
 
 " Setup plugins
-:lua require('cursorline')
-:lua require('indent_blankline_setup')
-:lua require('telescope_setup')
-:lua require('hydra_setup')
-:lua require('lualine_setup')
-:lua require('cmp_setup')
-:lua require('lsp_setup')
+:lua require('config.cursorline')
+:lua require('config.indent_blankline')
+:lua require('config.telescope')
+:lua require('config.hydra')
+:lua require('config.lualine')
+:lua require('config.cmp')
+:lua require('config.lsp')
 :lua require('gitsigns').setup()
 :lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
