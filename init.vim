@@ -38,6 +38,7 @@ Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
+Plug 'haringsrob/nvim_context_vt'                   " Shows context for functions, classes, etc.
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
