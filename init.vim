@@ -25,35 +25,35 @@
 call plug#begin()
 
 " UI / Workflow
-Plug 'nvim-lualine/lualine.nvim'                            " Status bar
-Plug 'https://github.com/ap/vim-css-color'                  " CSS Color Preview
-Plug 'https://github.com/ryanoasis/vim-devicons'            " Developer Icons
-Plug 'lukas-reineke/indent-blankline.nvim'                  " Indent Guide
-Plug 'lewis6991/gitsigns.nvim'                              " Git tooling
-Plug 'Pocco81/true-zen.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'folke/which-key.nvim'                                 " Key binding help
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }           " Buffer line
-Plug 'kyazdani42/nvim-web-devicons'                         " Colored Icons for buffers
-Plug 'TimUntersberger/neogit'                               " Git tooling
-Plug 'https://github.com/yamatsum/nvim-cursorline'          " Cursor Line
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}               " Terminal manager
+Plug 'nvim-lualine/lualine.nvim'                    " Status bar
+Plug 'ap/vim-css-color'                             " CSS Color Preview
+Plug 'ryanoasis/vim-devicons'                       " Developer Icons
+Plug 'lukas-reineke/indent-blankline.nvim'          " Indent Guide
+Plug 'lewis6991/gitsigns.nvim'                      " Git tooling
+Plug 'Pocco81/true-zen.nvim'                        " Zen focus
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }  " Colorscheme
+Plug 'folke/which-key.nvim'                         " Key binding help
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }   " Buffer line
+Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
+Plug 'TimUntersberger/neogit'                       " Git tooling
+Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
 
 " Telescope
-Plug 'nvim-telescope/telescope.nvim'                        " Fuzzy Search
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 " Helpers
-Plug 'nvim-lua/plenary.nvim'                                " Fuzzy Search
-Plug 'dense-analysis/ale'                                   " Lint Engine
-Plug 'preservim/nerdcommenter'                              " Commenter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter
-Plug 'nvim-treesitter/nvim-treesitter-context'              " Sticky Context
-Plug 'ThePrimeagen/harpoon'                                 " Bookmarks
-Plug 'windwp/nvim-autopairs'                                " Auto closing for brackets and html tags
-Plug 'https://github.com/anuvyklack/hydra.nvim'
-Plug 'phaazon/hop.nvim'                                     " Faster key navigation
+Plug 'nvim-lua/plenary.nvim'                                            " Util functions
+Plug 'dense-analysis/ale'                                               " Lint Engine
+Plug 'preservim/nerdcommenter'                                          " Commenter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}             " Treesitter
+Plug 'nvim-treesitter/nvim-treesitter-context'                          " Sticky Context
+Plug 'ThePrimeagen/harpoon'                                             " Bookmarks
+Plug 'windwp/nvim-autopairs'                                            " Auto closing for brackets and html tags
+Plug 'anuvyklack/hydra.nvim'                                            " Improves keybindings
+Plug 'phaazon/hop.nvim'                                                 " Faster key navigation
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown preview
 
 " Language server configuration and utilities
@@ -72,8 +72,8 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 
 " Other
-Plug 'andweeb/presence.nvim'                                " Discord Presence
-Plug 'famiu/nvim-reload'
+Plug 'andweeb/presence.nvim'    " Discord Presence
+Plug 'famiu/nvim-reload'        " Allows reloading config without restarting session
 
 call plug#end()
 
