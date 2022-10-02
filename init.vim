@@ -103,6 +103,7 @@ set completeopt=menu,menuone,noinsert,noselect
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
 :lua require('lspsaga').init_lsp_saga()
+:lua require('toggleterm').setup{}
 
 filetype plugin on
 
