@@ -86,6 +86,10 @@ let mapleader = ' '
 " Options for nvim-cmp
 set completeopt=menu,menuone,noinsert,noselect
 
+" Auto recalculate folds when entering a buffer
+" This is done because of a bug in telescope https://github.com/nvim-telescope/telescope.nvim/issues/699
+autocmd BufEnter * normal zx
+
 " Setup plugins
 :lua require('config.cursorline')
 :lua require('config.indent_blankline')
