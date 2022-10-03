@@ -76,6 +76,7 @@ Plug 'hrsh7th/cmp-buffer'
 " Other
 Plug 'andweeb/presence.nvim'    " Discord Presence
 Plug 'famiu/nvim-reload'        " Allows reloading config without restarting session
+Plug 'AckslD/nvim-neoclip.lua'  " Register
 
 call plug#end()
 
@@ -102,6 +103,7 @@ autocmd BufEnter * normal zx
 :lua require('config.cmp')
 :lua require('config.lsp')
 :lua require('config.dashboard')
+:lua require('config.neoclip')
 :lua require('gitsigns').setup()
 :lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
@@ -129,6 +131,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fm <cmd>Telescope harpoon marks<CR>
 nnoremap <leader>ft <cmd>Telescope treesitter<CR>
 nnoremap <leader>fr <cmd>lua require('telescope').extensions.file_browser.file_browser({ sorting_strategy = "ascending", prompt_position = "top", hidden = true })<CR>
+nnoremap <leader>fp <cmd>Telescope neoclip a<CR>
 nnoremap <C-/> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_ivy())<CR>
 " Harpoon
 nnoremap <leader>mm <cmd>lua require('harpoon.mark').add_file()<CR>
