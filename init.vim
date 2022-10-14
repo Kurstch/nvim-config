@@ -1,3 +1,4 @@
+:set spell
 :set autoindent
 :set expandtab
 :set tabstop=4
