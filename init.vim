@@ -39,6 +39,7 @@ Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
 Plug 'haringsrob/nvim_context_vt'                   " Shows context for functions, classes, etc.
 Plug 'glepnir/dashboard-nvim'                       " Dashboard
+Plug 'onsails/lspkind.nvim'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
