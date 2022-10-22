@@ -28,10 +28,10 @@ cmp.setup({
     },
 
     mapping = {
-        ['<Down>'] = cmp.mapping.select_next_item(),
-        ['<Up>']   = cmp.mapping.select_prev_item(),
-        ['<Esc>']  = cmp.mapping.close(),
-        ['<Tab>']  = cmp.mapping.confirm({
+        ['<Down>']    = cmp.mapping.select_next_item(),
+        ['<Up>']      = cmp.mapping.select_prev_item(),
+        ['<Esc>']     = cmp.mapping.close(),
+        ['<Tab>']     = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         }),

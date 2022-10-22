@@ -1,9 +1,10 @@
 local nvim_lsp = require('lspconfig')
 
-nvim_lsp.tsserver.setup{}
-nvim_lsp.vimls.setup{}
-nvim_lsp.marksman.setup{}
-nvim_lsp.rust_analyzer.setup{}
+nvim_lsp.tsserver.setup {}
+nvim_lsp.vimls.setup {}
+nvim_lsp.marksman.setup {}
+nvim_lsp.html.setup {}
+nvim_lsp.rust_analyzer.setup {}
 
 nvim_lsp.sumneko_lua.setup {
     settings = {
