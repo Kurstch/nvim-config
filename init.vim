@@ -31,7 +31,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'          " Indent Guide
 Plug 'lewis6991/gitsigns.nvim'                      " Git tooling
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }  " Colorscheme
 Plug 'folke/which-key.nvim'                         " Key binding help
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }   " Buffer line
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }   " Buffer line
 Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
@@ -100,8 +100,8 @@ autocmd BufEnter * normal zx
 :lua require('config.lsp')
 :lua require('config.dashboard')
 :lua require('config.neoclip')
+:lua require('config.bufferline')
 :lua require('gitsigns').setup()
-:lua require('bufferline').setup()
 :lua require('nvim-autopairs').setup()
 :lua require('which-key').setup()
 :lua require('neogit').setup()
