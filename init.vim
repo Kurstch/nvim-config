@@ -11,7 +11,7 @@ set mouse=a
 set nowrap
 set termguicolors
 set ignorecase
-set scrolloff=10
+set scrolloff=20
 set clipboard+=unnamedplus
 set cc=80
 
