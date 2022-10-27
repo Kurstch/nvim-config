@@ -1,3 +1,5 @@
+set number
+set relativenumber
 set spell
 set autoindent
 set expandtab
