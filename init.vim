@@ -10,6 +10,7 @@
 :set termguicolors
 :set ignorecase
 :set scrolloff=10
+:set clipboard+=unnamedplus
 
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
