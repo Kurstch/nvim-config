@@ -37,7 +37,6 @@ Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
-Plug 'glepnir/dashboard-nvim'                       " Dashboard
 Plug 'onsails/lspkind.nvim'
 
 " Telescope
@@ -99,7 +98,6 @@ autocmd BufEnter * normal zx
 :lua require('config.lualine')
 :lua require('config.cmp')
 :lua require('config.lsp')
-:lua require('config.dashboard')
 :lua require('config.neoclip')
 :lua require('config.bufferline')
 :lua require('gitsigns').setup()
