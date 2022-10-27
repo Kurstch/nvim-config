@@ -36,7 +36,6 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }   " Buffer line
 Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}       " Terminal manager
 Plug 'onsails/lspkind.nvim'
 
 " Telescope
