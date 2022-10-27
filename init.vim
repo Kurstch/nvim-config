@@ -74,6 +74,9 @@ Plug 'andweeb/presence.nvim'    " Discord Presence
 Plug 'famiu/nvim-reload'        " Allows reloading config without restarting session
 Plug 'AckslD/nvim-neoclip.lua'  " Register
 
+" Local development
+Plug '~/plugins/mdlens'
+
 call plug#end()
 
 " Set <leader> key before running `setup` on packages
@@ -107,6 +110,7 @@ lua require('neogit').setup()
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
 lua require('lspsaga').init_lsp_saga({ code_action_lightbulb = { virtual_text = false } })
+lua require('mdlens').setup({ workspaces = { '/home/martins/Documents/Notes' } })
 
 filetype plugin on
 
