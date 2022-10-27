@@ -1,26 +1,26 @@
-:set spell
-:set autoindent
-:set expandtab
-:set tabstop=4
-:set shiftwidth=4
-:set smarttab
-:set softtabstop=4
-:set mouse=a
-:set nowrap
-:set termguicolors
-:set ignorecase
-:set scrolloff=10
-:set clipboard+=unnamedplus
-:set cc=80
+set spell
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set mouse=a
+set nowrap
+set termguicolors
+set ignorecase
+set scrolloff=10
+set clipboard+=unnamedplus
+set cc=80
 
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
-:set foldenable
-:set foldmethod=syntax
-:set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
-:set fillchars=fold:\ 
-:set foldminlines=1
-:set foldlevel=10
+set foldenable
+set foldmethod=syntax
+set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
+set fillchars=fold:\ 
+set foldminlines=1
+set foldlevel=10
 
 call plug#begin()
 
@@ -91,29 +91,29 @@ autocmd BufWritePre * lua vim.lsp.buf.format(nil, 10)
 autocmd BufEnter * normal zx
 
 " Setup plugins
-:lua require('config.cursorline')
-:lua require('config.indent_blankline')
-:lua require('config.telescope')
-:lua require('config.hydra')
-:lua require('config.lualine')
-:lua require('config.cmp')
-:lua require('config.lsp')
-:lua require('config.neoclip')
-:lua require('config.bufferline')
-:lua require('gitsigns').setup()
-:lua require('nvim-autopairs').setup()
-:lua require('which-key').setup()
-:lua require('neogit').setup()
-:lua require('mason').setup()
-:lua require("mason-lspconfig").setup()
-:lua require('lspsaga').init_lsp_saga({ code_action_lightbulb = { virtual_text = false } })
+lua require('config.cursorline')
+lua require('config.indent_blankline')
+lua require('config.telescope')
+lua require('config.hydra')
+lua require('config.lualine')
+lua require('config.cmp')
+lua require('config.lsp')
+lua require('config.neoclip')
+lua require('config.bufferline')
+lua require('gitsigns').setup()
+lua require('nvim-autopairs').setup()
+lua require('which-key').setup()
+lua require('neogit').setup()
+lua require('mason').setup()
+lua require("mason-lspconfig").setup()
+lua require('lspsaga').init_lsp_saga({ code_action_lightbulb = { virtual_text = false } })
 
 filetype plugin on
 
 " Setup colorscheme
-:colorscheme tokyonight-night
-:highlight Folded guibg=none
-:highlight ColorColumn guibg=#191a26
+colorscheme tokyonight-night
+highlight Folded guibg=none
+highlight ColorColumn guibg=#191a26
 
 " Map keys
 " Telescope
