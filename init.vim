@@ -107,7 +107,7 @@ autocmd BufEnter * normal zx
 :lua require('neogit').setup()
 :lua require('mason').setup()
 :lua require("mason-lspconfig").setup()
-:lua require('lspsaga').init_lsp_saga()
+:lua require('lspsaga').init_lsp_saga({ code_action_lightbulb = { virtual_text = false } })
 
 filetype plugin on
 
