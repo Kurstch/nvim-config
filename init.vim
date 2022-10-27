@@ -16,8 +16,7 @@
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
 :set foldenable
-:set foldmethod=expr
-:set foldexpr=nvim_treesitter#foldexpr()
+:set foldmethod=syntax
 :set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
 :set fillchars=fold:\ 
 :set foldminlines=1
