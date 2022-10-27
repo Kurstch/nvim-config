@@ -84,7 +84,7 @@ let mapleader = ' '
 set completeopt=menu,menuone,noinsert,noselect
 
 " Auto format rust files on write
-autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)
+autocmd BufWritePre * lua vim.lsp.buf.format(nil, 10)
 
 " Auto recalculate folds when entering a buffer
 " This is done because of a bug in telescope https://github.com/nvim-telescope/telescope.nvim/issues/699
