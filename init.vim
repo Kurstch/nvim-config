@@ -124,7 +124,6 @@ nnoremap <leader>fs <cmd>Telescope find_files hidden=true<CR>
 nnoremap <leader>fc <cmd>Telescope commands<CR>
 nnoremap <leader>ff <cmd>Telescope git_files<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
-nnoremap <leader>fm <cmd>Telescope harpoon marks<CR>
 nnoremap <leader>ft <cmd>Telescope treesitter<CR>
 nnoremap <leader>fr <cmd>lua require('telescope').extensions.file_browser.file_browser({ sorting_strategy = "ascending", prompt_position = "top", hidden = true })<CR>
 nnoremap <leader>fp <cmd>Telescope neoclip a<CR>
@@ -134,6 +133,5 @@ nnoremap <silent> <leader>ld :Lspsaga peek_definition<CR>
 nnoremap <silent> <leader>lh :Lspsaga hover_doc<CR>
 nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>ls <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>lc :Lspsaga code_action<CR>
 nnoremap <silent> <F2> :Lspsaga rename<CR>
