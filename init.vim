@@ -11,6 +11,7 @@
 :set ignorecase
 :set scrolloff=10
 :set clipboard+=unnamedplus
+:set cc=80
 
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
@@ -115,6 +116,7 @@ filetype plugin on
 " Setup colorscheme
 :colorscheme tokyonight-night
 :highlight Folded guibg=none
+:highlight ColorColumn guibg=#191a26
 
 " Map keys
 " Telescope
