@@ -60,7 +60,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdo
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 Plug 'hrsh7th/vim-vsnip'
 Plug 'simrat39/rust-tools.nvim'
 
@@ -112,7 +111,6 @@ lua require('which-key').setup()
 lua require('neogit').setup()
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
-lua require('lspsaga').init_lsp_saga({ code_action_lightbulb = { virtual_text = false } })
 lua require('mdlens').setup({ workspaces = { '/home/martins/Documents/Notes' } })
 
 filetype plugin on
@@ -146,9 +144,9 @@ nnoremap <leader>fr <cmd>lua require('telescope').extensions.file_browser.file_b
 nnoremap <leader>fp <cmd>Telescope neoclip a<CR>
 nnoremap <C-/> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_ivy())<CR>
 " LSP
-nnoremap <silent> <leader>ld :Lspsaga peek_definition<CR>
-nnoremap <silent> <leader>lh :Lspsaga hover_doc<CR>
+nnoremap <silent> <leader>ld <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>lh <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> <leader>lc :Lspsaga code_action<CR>
-nnoremap <silent> <F2> :Lspsaga rename<CR>
+nnoremap <silent> <leader>lc <cmd>lua vim.lsp.bug.code_action()<CR>
+nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<CR>
