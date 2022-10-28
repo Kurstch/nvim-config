@@ -122,6 +122,19 @@ highlight Folded guibg=none
 highlight ColorColumn guibg=#191a26
 
 " Map keys
+" Unbind arrow keys to learn hjkl
+nnoremap <Up> <Nop>
+inoremap <Up> <Nop>
+vnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+inoremap <Down> <Nop>
+vnoremap <Down> <Nop>
+nnoremap <Right> <Nop>
+inoremap <Right> <Nop>
+vnoremap <Right> <Nop>
+nnoremap <Left> <Nop>
+inoremap <Left> <Nop>
+vnoremap <Left> <Nop>
 " Telescope
 nnoremap <leader>fs <cmd>Telescope find_files hidden=true<CR>
 nnoremap <leader>fc <cmd>Telescope commands<CR>
