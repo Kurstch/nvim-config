@@ -74,6 +74,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'andweeb/presence.nvim'    " Discord Presence
 Plug 'famiu/nvim-reload'        " Allows reloading config without restarting session
 Plug 'AckslD/nvim-neoclip.lua'  " Register
+Plug 'ThePrimeagen/vim-be-good'
 
 " Local development
 Plug '~/plugins/mdlens'
