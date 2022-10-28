@@ -14,6 +14,7 @@ set ignorecase
 set scrolloff=20
 set clipboard+=unnamedplus
 set cc=80
+set signcolumn=yes
 
 " folding, thanks to this post:
 " https://www.reddit.com/r/neovim/comments/psl8rq/sexy_folds/
