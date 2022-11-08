@@ -120,6 +120,14 @@ colorscheme tokyonight-night
 highlight Folded guibg=none
 highlight ColorColumn guibg=#191a26
 
+" Chnage default signcolumn icons
+sign define DiagnosticSignError   text= texthl=DiagnosticSignError   linehl=               numhl=
+sign define DiagnosticSignWarning text= texthl=DiagnosticSignWarning linehl=               numhl=
+sign define DiagnosticSignInfo    text= texthl=DiagnosticSignInfo    linehl=               numhl=
+sign define DiagnosticSignHint    text= texthl=DiagnosticSignHint    linehl=               numhl=
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+
 " Map keys
 " Unbind arrow keys to learn hjkl
 nnoremap <Up> <Nop>
