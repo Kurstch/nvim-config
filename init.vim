@@ -40,6 +40,8 @@ Plug 'kyazdani42/nvim-web-devicons'                 " Colored Icons for buffers
 Plug 'TimUntersberger/neogit'                       " Git tooling
 Plug 'yamatsum/nvim-cursorline'                     " Cursor Line
 Plug 'onsails/lspkind.nvim'
+Plug 'folke/twilight.nvim'
+Plug 'folke/zen-mode.nvim'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
@@ -112,12 +114,14 @@ lua require('neogit').setup()
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
 lua require('mdlens').setup({ workspaces = { '/home/martins/Documents/Notes' } })
+lua require('twilight').setup({ inactive = true })
+lua require('zen-mode').setup({ options = { cursorline = true } })
 
 filetype plugin on
 
 " Setup colorscheme
 colorscheme tokyonight-night
-highlight Folded guibg=none
+highlight! default link Folded Comment
 highlight ColorColumn guibg=#191a26
 
 " Chnage default signcolumn icons
@@ -158,3 +162,6 @@ nnoremap <silent> <leader>li <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <leader>lr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> <leader>lc <cmd>lua vim.lsp.bug.code_action()<CR>
 nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<CR>
+" Twilight & ZenMode
+nnoremap <silent> <leader>tt :Twilight<CR>
+nnoremap <silent> <leader>zt :ZenMode<CR>
