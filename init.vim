@@ -71,6 +71,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 
 " Other
 Plug 'andweeb/presence.nvim'    " Discord Presence
